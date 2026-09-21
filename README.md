@@ -1,8 +1,4 @@
-# Uber Application
-### ▶️ Watch the Full Video on YouTube: [Uber-App](https://www.youtube.com/watch?v=Cdx4DF9N8d8)
-## YouTube Series: How Uber Works Under The Hood
 
----
 
 ## Services Overview
 
@@ -31,38 +27,6 @@ Rider App → Ride Service → Kafka (ride.requested)
                                       ↓
                            Ride Service (update ride with driver)
 ```
-
----
-
-## How To Run
-
-### Step 1: Start Infrastructure
-```bash
-docker-compose up -d
-```
-This starts Redis, MySQL, Zookeeper, and Kafka.
-
-Wait 30 seconds for Kafka to fully start before running services.
-
-### Step 2: Start Location Service
-```bash
-cd location-service
-mvn spring-boot:run
-```
-
-### Step 3: Start Ride Service
-```bash
-cd ride-service
-mvn spring-boot:run
-```
-
-### Step 4: Start Matching Service
-```bash
-cd matching-service
-mvn spring-boot:run
-```
-
----
 
 ## Testing End-to-End Flow
 
